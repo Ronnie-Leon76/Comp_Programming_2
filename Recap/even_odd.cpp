@@ -47,8 +47,8 @@ void f_find_odd(){
 void f_sort_even(){
 	for(int i=0;i<even_count;i++){
 		for(int j=i+1;j<even_count;j++){
-			//swap smaller element found
-			if(even[j]<even[i]){
+			//swap greater element found
+			if(even[j]>even[i]){
 				temp = even[i];
 				even[i] = even[j];
 				even[j] = temp;
@@ -63,8 +63,8 @@ void f_sort_even(){
 void f_sort_odd(){
         for(int i=0;i<odd_count;i++){
                 for(int j=i+1;j<odd_count;j++){
-                        //swap smaller element found
-                        if(odd[j]<odd[i]){
+                        //swap greater element found
+                        if(odd[j]>odd[i]){
                                 temp = odd[i];
                                 odd[i] = odd[j];
                                 odd[j] = temp;
