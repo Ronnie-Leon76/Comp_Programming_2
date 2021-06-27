@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 class Shape{
 	public:
@@ -9,13 +10,13 @@ class Shape{
 			return 2*pi*radius;
 		}
 		double f_area_circle(void){
-			return pi*radius*radius;
+			return pi*pow(radius,2);
 		}
 		double f_perimeter_square(void){
 			return (2*radius)*4;
 		}
 		double f_area_square(void){
-			return (2*radius)*(2*radius);
+			return pow(2*radius,2);
 		}
 
 };
