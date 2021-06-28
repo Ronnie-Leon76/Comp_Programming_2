@@ -3,8 +3,8 @@
 using namespace std;
 class Shape{
 	public:
-		double length;
 		double radius;
+		double length;
 		const double pi = 3.142;
 		double f_circum_circle(void){
 			return 2*pi*radius;
@@ -16,7 +16,7 @@ class Shape{
 			return (2*radius)*4;
 		}
 		double f_area_square(void){
-			return pow(2*radius,2);
+			return pow((2*radius),2);
 		}
 
 };
