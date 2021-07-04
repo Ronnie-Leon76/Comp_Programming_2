@@ -1,3 +1,9 @@
+/*
+Name: Ochieng Ronnie Leon
+Registration Number: J23_5553_2019
+EEE202:Computer Programming_2
+Lab_Exercise_4
+ */
 #include <iostream>
 using namespace std;
 class Fibo {
