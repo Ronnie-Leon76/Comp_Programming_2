@@ -3,7 +3,7 @@ using namespace std;
 class Fibo {
 	public:
 		int terms;
-		int fib[terms];
+		int fib[40];
 		void f_inputs(){
 			cout<<"Enter the number of terms: "<<endl;
 			cin>>terms;
