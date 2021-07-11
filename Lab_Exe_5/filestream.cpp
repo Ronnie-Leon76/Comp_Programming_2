@@ -1,48 +1,62 @@
-#include<fstream>
-#include<iostream>
+#include <iostream>
+#include <string>
+#include <fstream>
+
 using namespace std;
-int main(){
-	char data[100];
 
-	// Open a file to write mode
-	
-	ofstream outfile;
-	outfile.open("myfile.txt");
+int main ()
+{
+        char reg_no[20];
+        char sec_reg_no[20];
+        ofstream dataFile;
+        dataFile.open("myfile.txt");
 
-	cout<<"Enter your Student's registration number: "<<endl;
-	cin.getline(data, 100);
+        cout<<"Enter the Student's Registration Number: "<<endl;
+        cin>>reg_no;
+        dataFile << reg_no << endl;
 
-	// Write inputted data to the file 
-	outfile << data <<endl;
+        cout<<"Enter your registration once again: "<<endl;
+        cin>>sec_reg_no;
+        dataFile << sec_reg_no << endl;
+        dataFile.close();
 
-	cout<<"Enter your Student's registration number again: "<<endl;
-	cin>>data;
-	cin.ignore();
+        ifstream infile;
+        infile.open("myfile.txt");
 
-	// Write inputted data to the file
-	outfile << data << endl;
+        cout<<"Reading from the file"<<endl;
 
-	// Close the opened file
-	outfile.close();
+        infile >> reg_no;
+        cout << reg_no << endl;
 
-	// Open a file in read mode
-	ifstream infile;
-	infile.open("myfile.txt");
+        infile >> sec_reg_no;
+        cout << sec_reg_no << endl;
 
-	cout<<"Reading from the file"<<endl;
-	infile >> data;
-	
-	// Write the data to the screen
-	cout<<data<<endl;
+        char check_true[10] = "Match";
+        char check_false[10] = "No Match";
+	if (reg_no == sec_reg_no){
+                ofstream outfile;
+                outfile.open("myfile.txt");
+                outfile << check_true << endl;
 
-	//Again read the data from the file and display it
-	infile >> data;
-	cout<<data<<endl;
+                ifstream in;
+                in.open("myfile.txt");
+                cout << check_true <<endl;
 
-	// Close the opened file
-	infile.close();
+        }
+        else {
+                ofstream outfile;
+                outfile.open("myfile.txt");
+                outfile << check_false << endl;
 
-	return 0;
+                ifstream in1;
+                in1.open("myfile.txt");
+                cout << check_false << endl;
+        }
 
 
+        infile.close();
+
+        return 0;
 }
+
+
