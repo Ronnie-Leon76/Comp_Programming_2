@@ -1,3 +1,8 @@
+/*
+ Name: Ochieng Ronnie Leon
+ Reg No: J23_5553_2019
+ EEE202: Computer Programming 2
+  */
 #include<iostream>
 using namespace std;
 class f_exponential{
