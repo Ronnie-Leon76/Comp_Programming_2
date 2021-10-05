@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1632322751 source:/home/ronnie/Desktop/EEE202/Chess Engine/main.cpp
+	<iostream>
+	<stdlib.h>
+
